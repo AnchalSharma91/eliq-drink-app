@@ -11,7 +11,7 @@
     backdrop-filter: blur(var(--brand-accent));
     -webkit-backdrop-filter: blur(var(--brand-accent));
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-    width:70%;
+    width:80%;
     margin: 0 auto;
   }
   

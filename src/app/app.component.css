@@ -1,10 +1,10 @@
 
 /* This is a fallback for the app in case the Config.json is not provided or not loaded properly. */
   :root {
-    --brand-primary: #333;
-    --brand-bg: #fff;
-    --brand-text: #000000;
-    --brand-accent: #f6f6f6;
+    --brand-primary: #B19CD9;
+    --brand-bg: #f0f4f8;
+    --brand-text: #333333;
+    --brand-accent: #e2e6ea;
     --brand-font: sans-serif;
   }
   
