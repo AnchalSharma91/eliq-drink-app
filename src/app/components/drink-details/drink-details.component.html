@@ -1,0 +1,42 @@
+<div class="drink-wrapper">
+  @if (drink) {
+    <div class="drink-card">
+      <!-- Drink Image -->
+      <div class="drink-image-container">
+        <img
+          [src]="drink.strDrinkThumb"
+          [alt]="drink.strDrink"
+          class="drink-image"
+        />
+      </div>
+
+      <!-- Drink Details -->
+      <div class="drink-content">
+        <h2 class="drink-title">{{ drink.strDrink }}</h2>
+        <p class="drink-category">
+          <strong>Category:</strong> {{ drink.strCategory }}
+        </p>
+
+        <!-- Ingredients Section -->
+        <div class="drink-section">
+          <h3 class="section-title">Ingredients</h3>
+          <div class="ingredient-list">
+            @for (ing of ingredients; track ing) {
+              <div class="ingredient-item">{{ ing }}</div>
+            }
+          </div>
+        </div>
+
+        <!-- Instructions Section (Below Ingredients) -->
+        <div class="drink-section instructions-section">
+          <h3 class="section-title">Instructions</h3>
+              <div class="instruction-block">
+                <p>
+                  {{drink.strInstructions}}
+                </p>
+              </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

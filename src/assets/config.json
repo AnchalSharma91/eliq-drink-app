@@ -1,0 +1,12 @@
+{
+  "appName": "Cocktail Palace",
+  "logoUrl": "/assets/favicon.ico",
+  "brand": {
+    "primaryColor": "#B19CD9",
+    "backgroundColor": "#f0f4f8",
+    "textColor": "#333",
+    "accentColor": "#e2e6ea",
+    "fontFamily": "Inter, sans-serif"
+  },
+  "theme": "light"
+}

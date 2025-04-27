@@ -1,0 +1,15 @@
+<header class="modern-header">
+    @if (config) {
+    <div (click) = "goToHome()" class="header-left">
+      <img [src]="config!.logoUrl" alt="Logo" class="logo" />
+      <span class="app-name">{{ config!.appName }}</span>
+    </div>
+    }
+    <div class="header-right">
+      <input type="search" (input)="onSearch($event)" class="search-bar" placeholder="Search..." />
+      <span class="material-icons icon-btn" aria-label="Settings" (click)="toggleTheme()">
+        settings
+      </span>
+    </div>
+  </header>
+  

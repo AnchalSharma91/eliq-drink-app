@@ -1,0 +1,143 @@
+/* General Wrapper */
+.drink-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--brand-bg);
+  min-height: 100vh;
+}
+
+/* Drink Card */
+.drink-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column; 
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drink-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Section */
+.drink-image-container {
+  width: 100%;
+  height: 350px;  
+  overflow: hidden;
+}
+
+.drink-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0; 
+}
+
+/* Drink Content */
+.drink-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.drink-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.drink-category {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Drink Section Styling */
+.drink-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Ingredients Side by Side */
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ingredient-item {
+  font-size: 1rem;
+  color: var(--brand-color);
+  font-weight: 500;
+  background: var(--brand-accent);
+  filter: brightness(1.08); 
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Instruction Block */
+.instructions-section {
+  margin-top: 20px; 
+}
+
+.instruction-block {
+  font-weight: 500;
+  background: var(--brand-accent);
+  filter: brightness(1.08); 
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.instruction-block p {
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.5;
+}
+
+.instruction-block strong {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drink-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .drink-image-container {
+    height: 250px; /* Adjusted height for mobile */
+  }
+
+  .drink-content {
+    padding: 15px;
+  }
+
+  .ingredient-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ingredient-item {
+    width: 100%; /* Stack ingredients on mobile */
+  }
+}

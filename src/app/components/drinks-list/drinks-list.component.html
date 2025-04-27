@@ -1,0 +1,26 @@
+<div class="drink-list">
+  @if (drinks!.length > 0) {
+    <div class="drink-grid">
+      @for (drink of filteredDrinks; track drink.idDrink) {
+        <div class="drink-card">
+          <img
+            [src]="drink.strDrinkThumb"
+            alt="{{ drink.strDrink }}"
+            class="drink-image"
+          />
+          <p class="drink-name">{{ drink.strDrink }}</p>
+          <button class="brand-button" (click)="openDetails(drink.idDrink)">
+            See recipe
+            <span class="material-icons">arrow_forward</span>
+          </button>
+        </div>
+      }
+    </div>
+  } @else {
+    <p class="no-drinks">No drinks available.</p>
+  }
+</div>
+
+
+
+
