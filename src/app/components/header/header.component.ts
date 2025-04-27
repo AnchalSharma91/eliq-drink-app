@@ -12,7 +12,6 @@ import { signal } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  searchTerm = signal<string>('');
   config: AppConfig = defaultConfig; // Initialize with default config
 
   constructor(private configService: ConfigService, private router: Router, private searchService: SearchService) {
@@ -28,8 +27,8 @@ export class HeaderComponent {
 
   onSearch(term: Event) {
     const target = term.target as HTMLInputElement;  
-    this.searchTerm.set(target.value);
-    //this.searchService.setSearchTerm(searchTerm);
+    const searchTerm = target.value;
+    this.searchService.setSearchTerm(searchTerm);
   }
 
   //this is a dummy function to switch the theme 
